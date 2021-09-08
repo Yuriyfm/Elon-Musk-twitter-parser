@@ -52,7 +52,7 @@ def scroll_down_page(driver):
             break
         last_height = new_height
 
-def collect_all_tweets_from_current_view(driver, num_of_cards, lookback_limit=25):
+def collect_all_tweets_from_current_view(driver, num_of_cards, lookback_limit=50):
     """ Данная функция собирает объекты последних подгруженных на страницу твитов. """
     page_cards = driver.find_elements_by_xpath('//div[@data-testid="tweet"]') # собираем объекты твитов подгруженные на страницу в page_cards
     if len(page_cards) <= lookback_limit:
